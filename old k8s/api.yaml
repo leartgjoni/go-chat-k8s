@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: api-pod
+  labels:
+    tier: backend
+spec:
+  containers:
+    - name: api-container
+      image: 942170411215.dkr.ecr.us-east-2.amazonaws.com/go-chat-api:latest
+      env:
+        - name: PORT
+          value: '80'
+        - name: REDIS_ADDR
+          value: redis-cluster-ip-service:6379
+  imagePullSecrets:
+    - name: awsecr-cred
