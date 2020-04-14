@@ -41,3 +41,9 @@ livenessProbe:
   httpGet:
     path: /
     port: 80
+
+horizontalPodAutoscaler: 
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 95

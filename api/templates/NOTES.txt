@@ -1,1 +1,1 @@
-Go Chat App Helm Chart
+Go Chat Api Helm Chart
