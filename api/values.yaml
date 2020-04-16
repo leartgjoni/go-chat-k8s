@@ -15,8 +15,6 @@ imagePullSecrets:
 service:
   port: 3051
   targetPort: 80
-  nodePort: 31516
-
 
 resources: 
   limits:

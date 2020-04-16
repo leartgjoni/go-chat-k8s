@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: {{ include "api.fullname" . }}
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
     - port: {{ .Values.service.port }}
       targetPort: {{ .Values.service.targetPort }}
-      nodePort: {{ .Values.service.nodePort }}
   selector:
     {{- include "api.selectorLabels" . | nindent 4 }}
