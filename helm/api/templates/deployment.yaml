@@ -24,7 +24,7 @@ spec:
             - name: PORT
               value: '{{ .Values.service.targetPort }}'
             - name: REDIS_ADDR
-              value: redis-cluster-ip-service:6379
+              value: redis:6379
           ports:
             - containerPort: {{ .Values.service.targetPort }}
           {{- with .Values.livenessProbe }}
