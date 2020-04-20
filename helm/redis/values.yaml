@@ -1,0 +1,22 @@
+# Default values for redis.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: redis
+  tag: latest
+  pullPolicy: Always
+
+service:
+  port: 6379
+  targetPort: 6379
+
+resources: 
+  limits:
+    cpu: 100m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 256Mi

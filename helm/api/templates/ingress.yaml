@@ -11,8 +11,8 @@ metadata:
     nginx.ingress.kubernetes.io/session-cookie-name: "ingress-ws"
 spec:
   rules:
-    # - host: {randomValue} --> need to set host for affinity to work
-    - http:
+    - host: {{ .Values.host }}
+      http:
         paths:
           - path: /api(/|$)(.*) # removing /api/ 
             backend:
